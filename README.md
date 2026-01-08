@@ -64,6 +64,7 @@ This allowed to get rid of problematic characters and simplify the tables.
 One of the tables had a problem with a **CSV export**, as `nulls` were not correctly read.
 
 A way out was to export the same table to **XLSX** format from the primary source (UN Comtrade), open it in Excel and then export it as CSV.
+
 ![Export_error](Export_error.jpg)
 
 
@@ -76,6 +77,6 @@ For that I needed to download next 2 tables (because of website limits) with HS-
 ![Comtrade_code_71_a](Comtrade_code_71_a.JPG)
 ![Comtrade_code_71_b](Comtrade_code_71_b.JPG)
 
-
-Digging further into HS4 code 7108, which breaks down trades regarding gold:
+While HS-4 codes were still vague, and as one of them appeared the most of the time, I decided to go one step further.
+HS-4 code 7108 represents gold in general. I wanted to dig deeper and break down trades regarding gold with HS-6 codes:
 ![Comtrade_code_7108](Comtrade_code_7108.JPG)
