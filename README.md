@@ -6,7 +6,7 @@ UN Comtrade Database (https://comtradeplus.un.org/) is a rich source of informat
 There is data regarding chosen countries, trade flows, modes of transport and types of commodities during a selected period of time.
 
 On the website, after creating an account, it is possible to download CSV files up to 100'000 records by choosing specific conditions of searching.
-![Comtrade_screen](Comtrade_screen.JPG)
+![Comtrade_screen](02_jpg/Comtrade_screen.JPG)
 
 
 ## Definitions
