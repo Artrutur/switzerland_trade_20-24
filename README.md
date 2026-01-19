@@ -65,7 +65,7 @@ One of the tables had a problem with a **CSV export**, as `nulls` were not corre
 
 A way out was to export the same table to **XLSX** format from the primary source (UN Comtrade), open it in Excel and then export it as CSV.
 
-![Export_error](Export_error.jpg)
+![Export_error](02_jpg/Export_error.jpg)
 
 
 ## **Appendix**
@@ -74,8 +74,8 @@ It seems that biggest 'deficit-makers' are countries who sell precious metals an
 
 For that I needed to download next 2 tables (because of website limits) with HS-4 numbers 7101-7118, and combine them:
 
-![Comtrade_code_71_a](Comtrade_code_71_a.JPG)
-![Comtrade_code_71_b](Comtrade_code_71_b.JPG)
+![Comtrade_code_71_a](02_jpg/Comtrade_code_71_a.JPG)
+![Comtrade_code_71_b](02_jpg/Comtrade_code_71_b.JPG)
 
 While HS-4 codes were still vague, and as one of them appeared the most of the time, I decided to go one step further.
 HS-4 code 7108 represents gold in general. I wanted to dig deeper and break down trades regarding gold with HS-6 codes:
