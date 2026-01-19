@@ -79,4 +79,4 @@ For that I needed to download next 2 tables (because of website limits) with HS-
 
 While HS-4 codes were still vague, and as one of them appeared the most of the time, I decided to go one step further.
 HS-4 code 7108 represents gold in general. I wanted to dig deeper and break down trades regarding gold with HS-6 codes:
-![Comtrade_code_7108](Comtrade_code_7108.JPG)
+![Comtrade_code_7108](02_jpg/Comtrade_code_7108.JPG)
