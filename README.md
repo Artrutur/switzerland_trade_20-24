@@ -1,29 +1,49 @@
 # 1. Intro
 
 This repository is a starting point for further analysis of **Switzerland's trade over the last 5 available years: 2020-2024.**
+
 The first approach is characterised by **drilling down through the structure of deficit-making countries to see if they share a certain pattern.**
 
+
 ## The Repository consists of:
+
 **1. Data Cleaning and Structuring**
+
    The structure of the Data Source (UN Comtrade Database)
+   
    The retrieval process
+   
    Fact and dimensions tables
+   
    Definitions
+   
    The initial approach
+   
    Cleaning and structuring process in SQL
 
 **2. Analysis of Deficit Drivers in Switzerland's trade**
+
   Analysis was conducted in SQL IDE and exported as a Jupyter Notebook.
+  
   The study answers questions:
+  
     _How big is Switzerland's Trade?_
+    
     _What is its structure in terms of trading partners and traded goods?_
+    
     _Which countries have an advantage over Switzerland in bilateral trade, and how does it appear?_
+    
     _What is the key driver making Switzerland only a buyer from the top deficit-making countries?_
+    
     _How does a wider context of the World Trade explain these facts?_
 
+
 **3. Presentation**
+
   After SQL analysis, the tables were secondarily reviewed in Power BI and confirmed the findings.
+  
   After Power BI analysis, the pages with charts were exported as a PDF presentation.
+  
   The presentation is an intuitive story built with key questions and charts to guide a reader through the analysis and its outcomes, giving explanations where needed.
 
 
