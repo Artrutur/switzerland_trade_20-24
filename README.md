@@ -28,15 +28,15 @@ The first approach is characterised by **drilling down through the structure of 
   
   The study answers questions:
   
-    _How big is Switzerland's Trade?_
+   _How big is Switzerland's Trade?_
     
-    _What is its structure in terms of trading partners and traded goods?_
+   _What is its structure in terms of trading partners and traded goods?_
     
-    _Which countries have an advantage over Switzerland in bilateral trade, and how does it appear?_
+   _Which countries have an advantage over Switzerland in bilateral trade, and how does it appear?_
     
-    _What is the key driver making Switzerland only a buyer from the top deficit-making countries?_
+   _What is the key driver making Switzerland only a buyer from the top deficit-making countries?_
     
-    _How does a wider context of the World Trade explain these facts?_
+   _How does a wider context of the World Trade explain these facts?_
 
 
 ### 1.3. Presentation
