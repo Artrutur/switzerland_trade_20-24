@@ -72,5 +72,5 @@ The first approach is characterised by **drilling down through the structure of 
 
   To fulfil global demand for refined „Swiss-made” gold, the country has become strategically dependent on these 27 partners. **The deficit is simply the „price” of maintaining its position as the world’s gold refinery.**
 
-  !(https://github.com/Artrutur/switzerland_trade_20-24/blob/c7a4b9456f3251bf9da61ba3833fd9c9a9c321b4/02_jpg/Deficit_gold_scatter_plot.png)
+  ![Largest deficit-makers and their gold exports to Switzerland](https://github.com/Artrutur/switzerland_trade_20-24/blob/c7a4b9456f3251bf9da61ba3833fd9c9a9c321b4/02_jpg/Deficit_gold_scatter_plot.png)
 
