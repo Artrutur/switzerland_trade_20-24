@@ -1,82 +1,53 @@
-# 1. Data Source and Definitions
+# 1. Intro
 
-## Data Source
+This repository is a starting point for further analysis of **Switzerland's trade over the last 5 available years: 2020-2024.**
+The first approach is characterised by **drilling down through the structure of deficit-making countries to see if they share a certain pattern.**
 
-UN Comtrade Database (https://comtradeplus.un.org/) is a rich source of information about world trade.
-There is data regarding chosen countries, trade flows, modes of transport and types of commodities during a selected period of time.
+## The Repository consists of:
+**1. Data Cleaning and Structuring**
+   The structure of the Data Source (UN Comtrade Database)
+   The retrieval process
+   Fact and dimensions tables
+   Definitions
+   The initial approach
+   Cleaning and structuring process in SQL
 
-On the website, after creating an account, it is possible to download CSV files up to 100'000 records by choosing specific conditions of searching.
-![Comtrade_screen](02_jpg/Comtrade_screen.JPG)
+**2. Analysis of Deficit Drivers in Switzerland's trade**
+  Analysis was conducted in SQL IDE and exported as a Jupyter Notebook.
+  The study answers questions:
+    _How big is Switzerland's Trade?_
+    _What is its structure in terms of trading partners and traded goods?_
+    _Which countries have an advantage over Switzerland in bilateral trade, and how does it appear?_
+    _What is the key driver making Switzerland only a buyer from the top deficit-making countries?_
+    _How does a wider context of the World Trade explain these facts?_
 
-
-## Definitions
-
-I was interested in finding data about **Switzerland's trading partners** over the last 5 available years: **2020-2024**.
-
-Then, I limited the outcomes to the **lowest level of aggregation of commodities (HS-2)**, which means wider and less detailed groups of products, but still detailed enough to draw specific insights.
-
-**HS**, which stands for **Harmonized System**, are codes commonly used throughout the import and export process for the classification of goods (https://www.trade.gov/harmonized-system-hs-codes)
-
-To clarify, this can be explained by an example:
-
-`HS-2` code no. 52: "Cotton"
-
-`HS-4` code no. 5204: "Cotton sewing thread, whether or not put up for retail sale"
-
-`HS-6` code no. 520411: "Cotton; sewing thread, containing 85% or more by weight of cotton, not put up for retail sale"
-
-In order to understand **physical flows**, I also wanted to see **modes of transport** by which commodities arrive in and are sent from Switzerland.
-
-# 2. First Questions and Ideas about Structuring the Data
-
-## Questions
-First questions that popped out of my head while thinking about that dataset were:
-
-**What Swiss Economy consist of?**
-
-**What are the types of most imported and exported goods?**
-
-**With whom does Switzerland trade the most?**
-
-**What transportation channels are the most popular?**
-
-**How has it changed over the last 5 years?**
-
-## Structure
-The tables come with many columns, which brings a lot of information, but also causes some **errors**.
-
-One of the problems was **special characters** in the names of the countries and in commodities' explanations or in their units.
-
-To simplify the process of getting this information, I decided to create **2 dimension tables** (name of `countries` and name of `commodities` with their codes) and **1 fact table** (with the numbers for all the partners throughout 5 years).
-
-It was possible to download the dimension tables separately, although they needed cleaning.
-
-To create 1 fact table, I needed to download data for each year separately (as shown on the print-screen above), while it was the biggest chunk of data (ca. 60'000+ rows) which fitted in the limits. After that, all 5 tables could have been combined as they contained the same fields.
+**3. Presentation**
+  After SQL analysis, the tables were secondarily reviewed in Power BI and confirmed the findings.
+  After Power BI analysis, the pages with charts were exported as a PDF presentation.
+  The presentation is an intuitive story built with key questions and charts to guide a reader through the analysis and its outcomes, giving explanations where needed.
 
 
-# 3. Data Cleaning and Structuring (SQL)
+# 2. Executive Summary
 
-## Fact Table
-Because of the limited `encoding` options in DataLab, I first uploaded and reduced the tables by unnecessary columns in **BigQuery** for each **Fact Table** (each year) : `ch_2020`,`ch_2021`,`ch_2022`,`ch_2023`,`ch_2024`.
+## 1. The „Big Picture” Context
 
-This allowed to get rid of problematic characters and simplify the tables.
+  Switzerland is the undisputed leader in the global gold industry. According to UN data, the country controls **20% of the world’s gold trade**, trading an average of **$100 billion in imports and exports annually**.
 
-One of the tables had a problem with a **CSV export**, as `nulls` were not correctly read.
+  **Quality Standards:** Switzerland’s influence is cemented by its refining capacity. 3 out of the 7 global LBMA Referees (the organizations that set world quality standards) are Swiss-based.
 
-A way out was to export the same table to **XLSX** format from the primary source (UN Comtrade), open it in Excel and then export it as CSV.
+  **The Business Model:** Switzerland imports raw gold (bars, bullion, or dore), purifies it to the highest standards, and sells it back to the global market.
 
-![Export_error](02_jpg/Export_error.jpg)
+## 2. Understanding the „Artificial” Deficit
 
+  The trade deficit with certain nations is not a sign of economic weakness. Instead, it is a structural result of Switzerland’s role in the supply chain.
 
-## **Appendix**
+  **The „Gold 27” Impact:** When we look at countries where gold makes up **over 80% of their exports to Switzerland**, we find a group of 27 states. This group alone is responsible for a **$34.84 billion (54%) of deficit in trade. They alone supply 50% of all gold imported into Switzerland.**
 
-It seems that biggest 'deficit-makers' are countries who sell precious metals and stones to Switzerland. As my level of detail is limited here, at this point I need to go deeper and download dataset which has more detail information regarding commodities_code = 71, which is also a group of goods with the biggest trading value.
+  **Investment Focus:** This analysis focuses strictly on gold (HS 7108), excluding jewellery or recycled scrap, which makes the concentration even more striking.
 
-For that I needed to download next 2 tables (because of website limits) with HS-4 numbers 7101-7118, and combine them:
+## 3. Strategic Dependency
+ 
+  Gold from these 27 countries alone accounts for **15% of Switzerland’s total imports**. To put this in perspective, this single commodity from this specific group of countries is **worth more than all goods imported from the USA**, Switzerland’s second-largest trading partner.
 
-![Comtrade_code_71_a](02_jpg/Comtrade_code_71_a.JPG)
-![Comtrade_code_71_b](02_jpg/Comtrade_code_71_b.JPG)
+  To fulfil global demand for refined „Swiss-made” gold, the country has become strategically dependent on these 27 partners. **The deficit is simply the „price” of maintaining its position as the world’s gold refinery.**
 
-While HS-4 codes were still vague, and as one of them appeared the most of the time, I decided to go one step further.
-HS-4 code 7108 represents gold in general. I wanted to dig deeper and break down trades regarding gold with HS-6 codes:
-![Comtrade_code_7108](02_jpg/Comtrade_code_7108.JPG)
