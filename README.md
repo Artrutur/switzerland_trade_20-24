@@ -1,5 +1,6 @@
 # 1. Intro
 
+
 This repository is a starting point for further analysis of **Switzerland's trade over the last 5 available years: 2020-2024.**
 
 The first approach is characterised by **drilling down through the structure of deficit-making countries to see if they share a certain pattern.**
