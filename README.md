@@ -7,7 +7,7 @@ The first approach is characterised by **drilling down through the structure of 
 
 ## The Repository consists of:
 
-**1. Data Cleaning and Structuring**
+### 1. Data Cleaning and Structuring
 
    The structure of the Data Source (UN Comtrade Database)
    
@@ -21,7 +21,7 @@ The first approach is characterised by **drilling down through the structure of 
    
    Cleaning and structuring process in SQL
 
-**2. Analysis of Deficit Drivers in Switzerland's trade**
+### 2. Analysis of Deficit Drivers in Switzerland's trade
 
   Analysis was conducted in SQL IDE and exported as a Jupyter Notebook.
   
@@ -38,7 +38,7 @@ The first approach is characterised by **drilling down through the structure of 
     _How does a wider context of the World Trade explain these facts?_
 
 
-**3. Presentation**
+### 3. Presentation
 
   After SQL analysis, the tables were secondarily reviewed in Power BI and confirmed the findings.
   
