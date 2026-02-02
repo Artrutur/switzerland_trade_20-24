@@ -1,5 +1,4 @@
-# 1. Intro
-
+# 1. Introduction
 
 This repository is a starting point for further analysis of **Switzerland's trade over the last 5 available years: 2020-2024.**
 
